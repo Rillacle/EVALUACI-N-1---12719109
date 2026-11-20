@@ -1,0 +1,193 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url("../assets/fonts/comfortaa/Comfortaa-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Comfortaa";
+    font-size: 14px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+.header {
+    min-height: 34px;
+    background-color: #334155;
+    color: #ffffff;
+    font-weight: 400;
+}
+.header strong {
+    font-weight: 700;
+}
+
+.header-logo,
+.header-figure {
+    display: none;
+}
+
+.figure-line {
+    display: block;
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
+.figure-line.short {
+    width: 9px;
+}
+
+.hero {
+    min-height: 92px;
+    gap: 8px;
+    padding: 12px;
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+.hero-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.hero-text {
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+.hero-button {
+    padding: 5px 9px;
+    border-radius: 4px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 0.55rem;
+    font-weight: 700;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
+.card {
+    min-height: 38px;
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 0.75rem;
+}
+
+.about-wide{
+    min-height: 38px;
+    background-color: #f3e8ff;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}
+.about-narrow {
+    display: none;
+}
+
+.cta {
+    min-height: 34px;
+    background-color: #fef3c7;
+    color: #92400e;
+    font-size: 0.75rem;
+}
+
+.footer {
+    min-height: 34px;
+    background-color: #334155;
+    color: #ffffff;
+    font-size: 0.75rem;
+}
+
+.card-extra {
+    display: none;
+    }
+
+@media (max-width: 650px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-extra {
+    display: flex;
+    }
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 14px;
+    }
+
+    .header-full {
+        display: none;
+    }
+
+    .header-logo {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    .header-figure {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+}
+
+.about-txt,
+.about-img {
+    display: none;
+}
+
+@media (max-width:500px) {
+    .about-narrow {
+        display: block;
+        min-height: 300px;
+        background-color: #f3e8ff;
+        color: #6b21a8;
+        font-size: 0.75rem;
+        align-items: center;
+    }
+    .about-wide {
+        display: none;
+    }
+    .about-img {
+        display: block;
+        background-image: url(../assets/img/imgp.png);
+        background-size: cover;
+        border-style: solid;
+        border-color: #ded6fe;
+        border-width: 5px;
+        border-radius: 10px;
+        min-width: 20px;
+        min-height: 200px;
+        max-width: 230px;
+        margin-left: 23%;
+        margin-top: 3%;
+    }
+    .about-txt {
+        display: block;
+        margin-top: 22px;
+        min-height: 20px;
+        background-color: #f3e8ff;
+        color: #6b21a8;
+        font-size: 0.65rem;
+    }
+}
